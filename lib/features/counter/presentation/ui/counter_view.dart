@@ -5,13 +5,10 @@ import 'package:flutter_architecture_example/features/counter/presentation/ui_lo
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CounterView extends WidgetView<CounterComponent> {
-  const CounterView(
-    super.component, {
-    super.key,
-  });
+  const CounterView();
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, CounterComponent component) {
     return Scaffold(
       body: Center(
         child: Column(

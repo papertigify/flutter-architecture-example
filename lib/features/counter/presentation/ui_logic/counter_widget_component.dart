@@ -16,7 +16,10 @@ class CounterWidgetComponent extends StatefulWidget {
 class _CounterWidgetComponentState extends ComponentState<CounterWidgetComponent, CounterComponent>
     implements CounterComponent {
   @override
-  WidgetView<CounterComponent> buildView(BuildContext context) => CounterView(this);
+  CounterComponent get component => this;
+
+  @override
+  WidgetView<CounterComponent> buildView() => const CounterView();
 
   @override
   void onIncrementPressed() => context.read<CounterBloc>().add(const CounterEvent.increment());
